@@ -1,0 +1,287 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14pt;
+
+    background: #eee;
+    color: #444;
+
+    margin: 0;
+}
+#main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    align-items: stretch;
+}
+#centre {
+    flex: 1;
+}
+#content {
+    width: 50rem;
+    margin: 0 auto;
+}
+header {
+    /*height: 35rem;*/
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+}
+.site-banner-container {
+    flex: 1;
+    overflow: hidden;
+}
+.site-banner {
+    width: 50rem;
+    height: 100%;
+    margin: 0 auto;
+    z-index: -2;
+}
+.site-banner h1 {
+    color: #222;
+    font-size: 96pt; /* 64pt; */
+    margin: 0;
+    display: flex;
+}
+.site-banner-inner >  h1 {
+    z-index: 2;
+    text-shadow: 4pt 0 #eee;
+    width: 200%;
+}
+.site-banner-inner >  h1::after {
+    content: ' ';
+    flex: 1;
+    align-self: flex-end;
+    height: .8ex;
+    background: #12b;
+    margin-bottom: 28pt;
+    margin-left: -16pt;
+    border-top-left-radius: 8pt;
+    border-bottom-left-radius: 16pt;
+    z-index: -1;
+}
+.site-banner span {
+    font-size: 96pt; /*64pt;*/
+}
+.site-banner-inner {
+    transform: rotate(-25deg);
+
+    position: relative;
+    top: -30vh;
+    left: 15vw;
+    /*left: 200px;
+    top: -15rem;*/
+
+    height: 130%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#upper-rule {
+    flex: 1;
+    width: 1em;
+
+    min-height: 100px;
+    background: #ee2;
+    margin-bottom: -15px;
+}
+#banner-low {
+    margin-top: -15px;
+    flex: 1;
+    display: flex;
+    width: 300%;
+}
+#banner-low h1 {
+    transform: rotate(90deg);
+    transform-origin: top left;
+    position: relative;
+    left: 1em;
+}
+#lower-thick {
+    width: 1em;
+    background: #e21;
+}
+#lower-thin {
+    position: relative;
+    left: -2em;
+    width: .4em;
+    background: #1b2;
+    height: 200%;
+}
+.site-banner-inner p {
+    position: relative;
+    max-width: 15em;
+    left: -192pt;
+    top: -2ex;
+    
+    padding-left: 1ex;
+
+    font-size: 16pt;
+}
+header .navbar {
+    background: #e21;
+    height: 2rem;
+}
+.navbar nav {
+    height: 100%;
+    width: 50rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+nav a, nav input {
+    width: 20%;
+}
+nav a {
+    text-align: center;
+    border-bottom: 4pt solid #222;
+    color: #222;
+
+    transition: 200ms ease-out;
+}
+nav a:hover {
+    background: #12b;
+    color: #eee;
+
+    border-bottom-color: #eee;
+}
+nav input {
+    border: none;
+    border-bottom: 4pt solid #222;
+}
+nav input:focus, nav input:hover {
+    border-bottom: 4pt solid #eee;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    color: #eee;
+    background: #333;
+
+    height: 6rem;
+}
+.post {
+  margin-top: 24pt;
+}
+.date {
+  width: 48pt;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-end;
+}
+.day {
+  width: 48pt;
+  height: 48pt;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  font-size: 28pt;
+  background: #1b2;
+
+  color: #eee;
+}
+.month {
+  height: 0;
+
+  font-size: 40pt;
+
+  transform-origin: top right;
+  transform: rotate(-90deg);
+
+  position: relative;
+  left: -48pt;
+  margin-top: .5ex;
+
+  color: #888;
+}
+.post-header {
+  margin-left: -48pt;
+
+  display: flex;
+}
+.post-body {
+  margin: 8pt;
+}
+.post-body p {
+  text-align: justify;
+  line-height: 1.6;
+}
+.post-body p:first-child::first-letter {
+  font-size: 300%;
+  float: left;
+  display: block;
+
+  line-height: 1;
+}
+.title {
+  flex: 1;
+  padding-left: 6pt;
+}
+.title h1 {
+  margin: 0;
+  margin-bottom: 6pt;
+  padding: 0;
+
+  color: #eee;
+
+  font-size: 36pt;
+  height: 48pt;
+
+  background: #12d;
+}
+.title h2 {
+  margin: 0;
+  padding: 0;
+  display: flex;
+
+  color: #333;
+
+  font-size: 24pt;
+  align-items: baseline;
+}
+.title h2::before {
+  content: ' ';
+  display: block;
+  flex: 1;
+  height: 1em;
+  background: #d12;
+}
+pre, code {
+  background: #ccc;
+  color: #555;
+  border-bottom: 2pt solid #555;
+}
+pre {
+  padding-left: 1ex;
+  border-left: 4pt solid #1d2;
+}
+.captioned-img {
+  background: #333;
+  color: #eee;
+  padding: 8pt;
+}
+.img-container {
+  max-height: 600px;
+  overflow: hidden;
+}
+.img-container:hover {
+  max-height: none;
+}
+.img-container img {
+  width: 100%;
+}
+.img-caption {
+  display: flex;
+  justify-content: center;
+}

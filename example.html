@@ -2,6 +2,9 @@
   <head>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="post-style.css"/>
+    <link rel="stylesheet" href="highlight/styles/default.css">
+    <script src="highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
   </head>
   <body>
     <div id="main">
@@ -24,6 +27,17 @@
           </div>
         </div>
         <div class="navbar">
+          <nav>
+            <svg height="50" viewbox="0 0 100 100">
+              <line x1="10" x2="90" y1="25" y2="25"/>
+              <line x1="10" x2="90" y1="50" y2="50"/>
+              <line x1="10" x2="90" y1="75" y2="75"/>
+            </svg>
+            <a href="#">Posts</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <input placeholder="Search..."/>
+          </nav>
         </div>
       </header>
       <div id="centre">
@@ -35,6 +49,7 @@
             </span>
             <span class="title">
               <h1>An Example Post</h1>
+              <h2>Of very little interest</h2>
             </span>
           </div>
           <div class="post-body">
@@ -42,7 +57,7 @@
             
             <p>Perhaps I should write some code. There's probably going to be a lot of code on this site, so it's important that it looks both nice and readable. In-line code might look something like <code>this</code>, which hopefully looks alright. If for any reason I wanted to talk about key-combinations, then I'd probably use a lot of <kbd>ctrl</kbd> + <kbd>c</kbd> and <kbd>ctrl</kbd> + <kbd>v</kbd>. That was graceful wasn't it &ndash; the way I just slipped those in there. With just as much grace and natural flow, here's a big block of code:</p>
             
-            <pre>
+            <pre><code>
 def mandlebrot(x, y, max_iters=1000):
   c = complex(x, y)
   z = complex(0, 0)
@@ -52,7 +67,7 @@ def mandlebrot(x, y, max_iters=1000):
     if abs(z) >= 2:
       return max_iters
   return False
-            </pre>
+            </code></pre>
           </div>
         </div>
       </div>

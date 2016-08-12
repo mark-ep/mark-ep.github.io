@@ -122,7 +122,7 @@ header {
 }
 header .navbar {
     background: #e21;
-    height: 2rem;
+    height: 3rem;
 }
 .navbar nav {
     height: 100%;
@@ -136,24 +136,33 @@ nav a, nav input {
     width: 20%;
 }
 nav a {
-    text-align: center;
-    border-bottom: 4pt solid #222;
-    color: #222;
+    border-bottom: 4pt solid #eee;
+    color: #eee;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    font-size: 18pt;
+    text-decoration: none;
+  
     transition: 200ms ease-out;
 }
 nav a:hover {
-    background: #12b;
-    color: #eee;
-
-    border-bottom-color: #eee;
+    background: #222;
 }
 nav input {
+    background: transparent;
+    color: #eee;
     border: none;
-    border-bottom: 4pt solid #222;
+    border-bottom: 4pt solid #eee;
+  
+    font-size: 18pt;
+  
+    transition: 200ms ease-out;
 }
 nav input:focus, nav input:hover {
-    border-bottom: 4pt solid #eee;
+    background: #222;
 }
 footer {
     display: flex;
@@ -207,6 +216,7 @@ footer {
   color: #888;
 }
 .post-header {
+  margin-top: 24pt;
   margin-left: -48pt;
 
   display: flex;
@@ -232,14 +242,24 @@ footer {
 .title h1 {
   margin: 0;
   margin-bottom: 6pt;
-  padding: 0;
-
-  color: #eee;
-
-  font-size: 36pt;
   height: 48pt;
 
+  color: #222;
+
+  font-size: 36pt;
+  display: flex;
+/*  background: #12d;*/
+  overflow: hidden;
+}
+.title h1:after {
+  content: ' ';
   background: #12d;
+  flex: 1;
+/*  height: 1em;*/
+  
+  transform: skewX(25deg);
+  margin-left: 6pt;
+  margin-right: -32pt;
 }
 .title h2 {
   margin: 0;
@@ -250,13 +270,18 @@ footer {
 
   font-size: 24pt;
   align-items: baseline;
+  
+  overflow: hidden;
 }
 .title h2::before {
   content: ' ';
-  display: block;
   flex: 1;
   height: 1em;
-  background: #d12;
+  background: #e21;
+  
+  transform: skewX(25deg);
+  margin-right: 6pt;
+  margin-left: -24pt;
 }
 pre, code {
   background: #ccc;
@@ -265,7 +290,7 @@ pre, code {
 }
 pre {
   padding-left: 1ex;
-  border-left: 4pt solid #1d2;
+/*  border-left: 4pt solid #1d2;*/
 }
 .captioned-img {
   background: #333;
@@ -285,4 +310,14 @@ pre {
 .img-caption {
   display: flex;
   justify-content: center;
+}
+b {
+  color: #222;
+}
+nav svg {
+  height: 100%;
+}
+nav svg line {
+  stroke: #eee;
+  stroke-width: 10;
 }

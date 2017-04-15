@@ -185,9 +185,8 @@ a.tag:hover {
   min-height: 72pt;
 }
 #copy-disclaimer {
-  min-width: 500px;
-
   flex: 2;
+  min-width: 100%;
   display: flex;
   
   flex-direction: column;
@@ -252,7 +251,7 @@ em {
 strong {
   font-weight: 700;
 }
-@media only screen and (min-width: 10cm) {
+@media (min-width: 40em) {
   .date {
     width: 4rem;
     height: 4rem;
@@ -276,6 +275,7 @@ strong {
     border-bottom: 4pt solid;
   }
   #copy-disclaimer {
+    min-width: auto;
     border-top: none;
     border-right: 2pt solid;
   }

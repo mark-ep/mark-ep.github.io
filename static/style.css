@@ -252,7 +252,7 @@ em {
 strong {
   font-weight: 700;
 }
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 10cm) {
   .date {
     width: 4rem;
     height: 4rem;
